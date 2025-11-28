@@ -38,12 +38,12 @@ class GeminiClient:
 
             Format your response EXACTLY like this:
 
-            **Document Type:** [type]
+            Document Type: [type]
             
-            **Summary:**
+            Summary:
             [Your detailed summary here]
             
-            **Legal Terms Found:**
+            Legal Terms Found:
             - term1: definition1
             - term2: definition2
             - term3: definition3
@@ -101,13 +101,13 @@ class GeminiClient:
     # Return fallback response when API fails or blocks content
     def _get_fallback_response(self, text: str) -> Tuple[str, List[str], Dict]:
         summary = f"""
-            **Document Analysis (Fallback)**
+            Document Analysis (Fallback)
 
             This appears to be a legal document containing approximately {len(text.split())} words.
 
             Due to API content filtering, a detailed analysis could not be completed automatically. The document contains standard legal terminology and provisions.
 
-            **Manual Review Recommended:** Please review the document for specific terms, obligations, and conditions.
+            Manual Review Recommended: Please review the document for specific terms, obligations, and conditions.
         """
         usage_metadata = {'prompt_tokens': 0, 'completion_tokens': 0, 'total_tokens': 0}
         return summary, [], usage_metadata
@@ -117,7 +117,7 @@ class GeminiClient:
         terms = []
         
         # Check if Gemini included a legal terms section
-        if "**Legal Terms Found:**" in summary:
+        if "Legal Terms Found:" in summary:
             terms_section = summary.split("**Legal Terms Found:**")[1]
         elif "Legal Terms Found:" in summary:
             terms_section = summary.split("Legal Terms Found:")[1]
@@ -142,7 +142,7 @@ class GeminiClient:
             return summary
         
         # Look up definitions for the terms (limit to 3 to avoid too many API calls)
-        definitions_section = "\n**Legal Terms Explained:**\n"
+        definitions_section = "\nLegal Terms Explained:\n"
         
         terms_defined = 0
         for term in ai_identified_terms:
