@@ -1,0 +1,4 @@
+GEMINI_API_KEY=Insert_your_API_key_here
+GEMINI_MODEL=gemini-2.5-flash
+LOG_FILE=data/logs.json
+SUMMARIES_FILE=data/summaries.json
