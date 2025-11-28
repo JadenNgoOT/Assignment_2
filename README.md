@@ -4,27 +4,24 @@
 AI-powered legal document summarization with automatic legal term lookup using Google's Gemini API.
 
 ### Features
-
 - Analyze contracts, NDAs, employment agreements, and other legal documents
 - Automatic legal term lookup and definitions
 - Auto-save all summaries with full history
 - Telemetry logging (tokens, cost, latency)
 - Safety features (input validation, prompt injection detection)
-- Comprehensive test suite (16+ test cases)
-- Clean web interface
+- Comprehensive test suite (16 test cases)
 
 ### Tech Stack
-
 - **Backend**: FastAPI (Python)
 - **AI Model**: Google Gemini 2.5 Flash
-- **Frontend**: HTML/CSS/JavaScript
+- **Frontend**: HTML
 - **Data**: JSON storage
 
 ### Quick Start
 
 #### Prerequisites
-- Python 3.8+
-- Gemini API key (free tier available)
+- Python 3
+- Gemini API key
 
 #### Installation
 1. **Clone the repository**
@@ -53,7 +50,7 @@ pip install -r requirements.txt
 ```bash
 cp .env.example .env
 # Edit .env and add your API key:
-# GEMINI_API_KEY=your_key_here
+# GEMINI_API_KEY=Insert_your_API_key_here
 ```
 
 6. **Run the application**
@@ -68,34 +65,13 @@ Navigate to http://localhost:8000
 
 #### Web Interface
 
-1. Start the server: `python run.py`
+1. Start the server
 2. Open http://localhost:8000
 3. Upload a document or paste text
 4. Click "Analyze Document"
 5. View summary, terms, and metadata
 6. Check "Recent Summaries" for history
 
-#### API Endpoints
-
-**Analyze Document**
-```bash
-curl -X POST http://localhost:8000/api/analyze \
-  -H "Content-Type: application/json" \
-  -d '{
-    "text": "Your legal document text here...",
-    "document_name": "my_contract.txt"
-  }'
-```
-
-**Get All Summaries**
-```bash
-curl http://localhost:8000/api/summaries
-```
-
-**Health Check**
-```bash
-curl http://localhost:8000/api/health
-```
 
 ### Running Tests
 ```bash
@@ -139,7 +115,6 @@ Every request logs:
 - Pathway (tool used or none)
 - Latency (milliseconds)
 - Tokens used
-- Cost estimate
 - Success/failure status
 
 View logs in `data/logs.json`
@@ -149,18 +124,7 @@ View logs in `data/logs.json`
 The system automatically:
 1. Scans documents for legal jargon
 2. Looks up definitions via dictionary API
-3. Falls back to built-in legal terms
 4. Includes definitions in summary
-
-Supported terms:
-- indemnification
-- force majeure
-- arbitration
-- jurisdiction
-- breach
-- covenant
-- liability
-- and more...
 
 ### Data Storage
 
@@ -173,7 +137,6 @@ All summaries auto-save to `data/summaries.json`:
   "summary": "...",
   "terms_looked_up": ["indemnification"],
   "tokens_used": 1250,
-  "cost_estimate": 0.0015,
   "input_length": 450
 }
 ```
