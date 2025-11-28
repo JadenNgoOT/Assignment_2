@@ -1,7 +1,6 @@
 import json
 import os
 from datetime import datetime
-from typing import Optional
 from .config import config
 from .models import LogEntry, Summary
 
