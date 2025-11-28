@@ -1,0 +1,81 @@
+MUTUAL NON-DISCLOSURE AGREEMENT
+
+This Mutual Non-Disclosure Agreement (the "Agreement") is entered into as of January 15, 2024 (the "Effective Date") by and between:
+
+TechCorp Inc., a Delaware corporation with offices at 123 Tech Street, San Francisco, CA 94105 ("TechCorp")
+
+AND
+
+InnovateLabs LLC, a California limited liability company with offices at 456 Innovation Ave, Palo Alto, CA 94301 ("InnovateLabs")
+
+(Each a "Party" and collectively the "Parties")
+
+WHEREAS, the Parties wish to explore a potential business relationship of mutual interest and benefit; and
+
+WHEREAS, in connection with such discussions, each Party may disclose to the other certain confidential technical and business information which the disclosing Party desires the receiving Party to treat as confidential.
+
+NOW, THEREFORE, in consideration of the mutual covenants and agreements contained herein, and for other good and valuable consideration, the receipt and sufficiency of which are hereby acknowledged, the Parties agree as follows:
+
+1. DEFINITION OF CONFIDENTIAL INFORMATION
+
+"Confidential Information" means any information disclosed by either Party to the other Party, either directly or indirectly, in writing, orally, or by inspection of tangible objects, which is designated as "Confidential," "Proprietary," or some similar designation, or which should reasonably be understood to be confidential given the nature of the information and the circumstances of disclosure.
+
+2. OBLIGATIONS OF RECEIVING PARTY
+
+Each Party agrees to:
+(a) Hold and maintain the Confidential Information of the other Party in strict confidence;
+(b) Not disclose such Confidential Information to third parties without prior written consent;
+(c) Not use such Confidential Information except for purposes of evaluating and engaging in discussions concerning the potential business relationship;
+(d) Protect the Confidential Information using the same degree of care it uses to protect its own confidential information, but in no event less than reasonable care.
+
+3. EXCLUSIONS FROM CONFIDENTIAL INFORMATION
+
+The obligations set forth in Section 2 shall not apply to any Confidential Information that:
+(a) Was publicly known at the time of disclosure;
+(b) Becomes publicly known through no wrongful act of the receiving Party;
+(c) Was rightfully received from a third party without breach of any confidentiality obligation;
+(d) Was independently developed by the receiving Party without use of the Confidential Information.
+
+4. TERM AND TERMINATION
+
+This Agreement shall commence on the Effective Date and continue for a period of two (2) years, unless earlier terminated by either Party upon thirty (30) days' written notice to the other Party.
+
+5. RETURN OF MATERIALS
+
+Upon termination of this Agreement or upon request by the disclosing Party, the receiving Party shall promptly return or destroy all Confidential Information and all copies thereof.
+
+6. NO LICENSE
+
+Nothing in this Agreement shall be construed as granting any rights under any patent, copyright, or other intellectual property right of either Party, nor shall this Agreement grant the receiving Party any rights in or to the Confidential Information except as expressly set forth herein.
+
+7. INDEMNIFICATION
+
+Each Party agrees to indemnify and hold harmless the other Party from and against any and all losses, damages, liabilities, costs, and expenses (including reasonable attorneys' fees) arising out of or resulting from any breach of this Agreement by the indemnifying Party.
+
+8. REMEDIES
+
+Each Party acknowledges that the Confidential Information is valuable and unique, and that disclosure in breach of this Agreement will result in irreparable injury for which monetary damages would not be an adequate remedy. Accordingly, each Party agrees that the other Party shall be entitled to seek equitable relief, including injunction and specific performance, in the event of any breach or threatened breach of this Agreement.
+
+9. GOVERNING LAW
+
+This Agreement shall be governed by and construed in accordance with the laws of the State of California, without regard to its conflicts of law principles.
+
+10. ENTIRE AGREEMENT
+
+This Agreement constitutes the entire agreement between the Parties concerning the subject matter hereof and supersedes all prior agreements and understandings, whether written or oral, relating to such subject matter.
+
+IN WITNESS WHEREOF, the Parties have executed this Agreement as of the Effective Date.
+
+TECHCORP INC.
+
+By: _______________________
+Name: Sarah Johnson
+Title: Chief Executive Officer
+Date: January 15, 2024
+
+INNOVATELABS LLC
+
+By: _______________________
+Name: Michael Chen
+Title: Managing Director
+Date: January 15, 2024

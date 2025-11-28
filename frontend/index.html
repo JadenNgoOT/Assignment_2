@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legal Document Analyzer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border: 1px solid #ddd;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .section {
+            margin-bottom: 30px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            background: #fafafa;
+        }
+
+        .section h2 {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        input[type="file"] {
+            display: block;
+            margin-bottom: 15px;
+            padding: 5px;
+            border: 1px solid #ddd;
+        }
+
+        textarea {
+            width: 100%;
+            min-height: 200px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            font-family: monospace;
+            font-size: 13px;
+            resize: vertical;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin-right: 10px;
+            margin-top: 10px;
+            border: 1px solid #333;
+            background: #fff;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        button:hover {
+            background: #f0f0f0;
+        }
+
+        button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .btn-primary {
+            background: #333;
+            color: white;
+            font-weight: bold;
+        }
+
+        .btn-primary:hover {
+            background: #555;
+        }
+
+        .result-box {
+            background: white;
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-top: 15px;
+        }
+
+        .result-box h3 {
+            font-size: 16px;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+        }
+
+        .result-box pre {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            font-family: monospace;
+            font-size: 13px;
+            line-height: 1.5;
+        }
+
+        .metadata {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #ddd;
+        }
+
+        .metadata-row {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+
+        .metadata-row strong {
+            display: inline-block;
+            width: 150px;
+        }
+
+        .message {
+            padding: 10px;
+            margin-top: 10px;
+            border-left: 4px solid #333;
+        }
+
+        .error {
+            background: #fee;
+            border-left-color: #c33;
+            color: #c33;
+        }
+
+        .success {
+            background: #efe;
+            border-left-color: #363;
+            color: #363;
+        }
+
+        .loading {
+            display: none;
+            padding: 20px;
+            text-align: center;
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            margin-top: 15px;
+        }
+
+        .loading.active {
+            display: block;
+        }
+
+        .history-list {
+            margin-top: 15px;
+        }
+
+        .history-item {
+            background: white;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        .history-item h4 {
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+
+        .history-item p {
+            font-size: 13px;
+            color: #666;
+            margin: 3px 0;
+        }
+
+        .terms-badge {
+            display: inline-block;
+            background: #ddd;
+            padding: 2px 6px;
+            margin-right: 5px;
+            font-size: 11px;
+            border: 1px solid #999;
+        }
+
+        hr {
+            margin: 20px 0;
+            border: none;
+            border-top: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Legal Document Analyzer</h1>
+        <p class="subtitle">AI-Powered Contract Summarization with Legal Term Lookup</p>
+
+        <!-- Input Section -->
+        <div class="section">
+            <h2>1. Input Document</h2>
+            
+            <label for="fileInput">Upload File (TXT or PDF):</label>
+            <input type="file" id="fileInput" accept=".txt,.pdf">
+
+            <label for="documentText">Or Paste Text:</label>
+            <textarea id="documentText" placeholder="Paste your legal document here..."></textarea>
+
+            <button class="btn-primary" id="analyzeBtn" onclick="analyzeDocument()">Analyze Document</button>
+            <button onclick="clearInput()">Clear</button>
+
+            <div id="errorMessage"></div>
+        </div>
+
+        <!-- Results Section -->
+        <div class="section">
+            <h2>2. Analysis Results</h2>
+            
+            <div class="loading" id="loading">
+                <p>⏳ Analyzing document, please wait...</p>
+            </div>
+
+            <div id="results" style="display: none;">
+                <div class="result-box">
+                    <h3>Summary</h3>
+                    <pre id="summaryText"></pre>
+                    
+                    <div class="metadata">
+                        <div class="metadata-row">
+                            <strong>Tokens Used:</strong>
+                            <span id="tokensUsed">-</span>
+                        </div>
+                        <div class="metadata-row">
+                            <strong>Cost Estimate:</strong>
+                            <span id="costEstimate">-</span>
+                        </div>
+                        <div class="metadata-row">
+                            <strong>Terms Looked Up:</strong>
+                            <span id="termsCount">-</span>
+                        </div>
+                        <div class="metadata-row">
+                            <strong>Summary ID:</strong>
+                            <span id="savedId">-</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="successMessage" class="message success" style="display: none;">
+                    ✓ Analysis complete. Summary has been saved.
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- History Section -->
+        <div class="section">
+            <h2>3. Summary History</h2>
+            <button onclick="loadHistory()">Refresh History</button>
+            <div class="history-list" id="historyList">
+                <p style="color: #999;">No summaries yet.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const API_BASE = 'http://localhost:8000/api';
+
+        // Handle file upload
+        document.getElementById('fileInput').addEventListener('change', async (e) => {
+            const file = e.target.files[0];
+            if (!file) return;
+
+            const reader = new FileReader();
+            reader.onload = (event) => {
+                document.getElementById('documentText').value = event.target.result;
+            };
+            reader.readAsText(file);
+        });
+
+        async function analyzeDocument() {
+            const text = document.getElementById('documentText').value.trim();
+            
+            if (!text) {
+                showError('Please enter or upload a document first.');
+                return;
+            }
+
+            const analyzeBtn = document.getElementById('analyzeBtn');
+            const loading = document.getElementById('loading');
+            const results = document.getElementById('results');
+            const errorMessage = document.getElementById('errorMessage');
+
+            // Reset UI
+            analyzeBtn.disabled = true;
+            loading.classList.add('active');
+            results.style.display = 'none';
+            errorMessage.innerHTML = '';
+
+            try {
+                const response = await fetch(`${API_BASE}/analyze`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        text: text,
+                        document_name: document.getElementById('fileInput').files[0]?.name || 'pasted_document.txt'
+                    })
+                });
+
+                if (!response.ok) {
+                    const error = await response.json();
+                    throw new Error(error.detail || 'Analysis failed');
+                }
+
+                const data = await response.json();
+
+                // Display results
+                document.getElementById('summaryText').textContent = data.summary;
+                document.getElementById('tokensUsed').textContent = data.tokens_used || 'N/A';
+                document.getElementById('costEstimate').textContent = data.cost_estimate ? `$${data.cost_estimate.toFixed(6)}` : 'N/A';
+                document.getElementById('termsCount').textContent = data.terms_looked_up.length || 0;
+                document.getElementById('savedId').textContent = data.saved_id;
+
+                results.style.display = 'block';
+                document.getElementById('successMessage').style.display = 'block';
+
+                // Refresh history
+                loadHistory();
+
+            } catch (error) {
+                showError(error.message);
+            } finally {
+                analyzeBtn.disabled = false;
+                loading.classList.remove('active');
+            }
+        }
+
+        async function loadHistory() {
+            try {
+                const response = await fetch(`${API_BASE}/summaries`);
+                const data = await response.json();
+                
+                const historyList = document.getElementById('historyList');
+                
+                if (data.summaries.length === 0) {
+                    historyList.innerHTML = '<p style="color: #999;">No summaries yet.</p>';
+                    return;
+                }
+
+                historyList.innerHTML = data.summaries
+                    .reverse()
+                    .slice(0, 10)
+                    .map(item => `
+                        <div class="history-item">
+                            <h4>${item.document_name}</h4>
+                            <p><strong>ID:</strong> ${item.id}</p>
+                            <p><strong>Date:</strong> ${new Date(item.timestamp).toLocaleString()}</p>
+                            <p><strong>Tokens:</strong> ${item.tokens_used || 'N/A'}</p>
+                            ${item.terms_looked_up.length > 0 ? `
+                                <p><strong>Terms:</strong> ${item.terms_looked_up.map(term => 
+                                    `<span class="terms-badge">${term}</span>`
+                                ).join('')}</p>
+                            ` : ''}
+                        </div>
+                    `).join('');
+
+            } catch (error) {
+                console.error('Failed to load history:', error);
+            }
+        }
+
+        function clearInput() {
+            document.getElementById('documentText').value = '';
+            document.getElementById('fileInput').value = '';
+            document.getElementById('results').style.display = 'none';
+            document.getElementById('errorMessage').innerHTML = '';
+        }
+
+        function showError(message) {
+            const errorDiv = document.getElementById('errorMessage');
+            errorDiv.innerHTML = `<div class="message error">✗ ${message}</div>`;
+        }
+
+        // Load history on page load
+        window.addEventListener('load', loadHistory);
+    </script>
+</body>
+</html>

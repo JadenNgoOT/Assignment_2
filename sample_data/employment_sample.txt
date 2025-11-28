@@ -1,0 +1,91 @@
+EMPLOYMENT AGREEMENT
+
+This Employment Agreement (the "Agreement") is made and entered into as of February 1, 2024, by and between:
+
+DataSystems Corporation, a Delaware corporation with its principal place of business at 789 Corporate Blvd, Austin, TX 78701 (the "Company")
+
+AND
+
+Jane Smith, an individual residing at 321 Residential Lane, Austin, TX 78702 (the "Employee")
+
+1. POSITION AND DUTIES
+
+The Company hereby employs Employee as Senior Software Engineer. Employee accepts such employment and agrees to perform diligently and to the best of Employee's abilities the duties and services assigned to Employee by the Company.
+
+2. TERM OF EMPLOYMENT
+
+Employment under this Agreement shall commence on February 15, 2024, and shall continue on an at-will basis, meaning that either the Company or Employee may terminate the employment relationship at any time, with or without cause or advance notice.
+
+3. COMPENSATION
+
+(a) Base Salary: The Company shall pay Employee an annual base salary of $150,000, payable in accordance with the Company's standard payroll practices.
+
+(b) Benefits: Employee shall be eligible to participate in all employee benefit plans maintained by the Company, subject to the terms and conditions of such plans.
+
+(c) Vacation: Employee shall be entitled to three (3) weeks of paid vacation per year, accrued in accordance with Company policy.
+
+4. PROBATIONARY PERIOD
+
+The first ninety (90) days of employment shall constitute a probationary period. During this period, either party may terminate employment without cause upon one (1) week's notice.
+
+5. CONFIDENTIALITY
+
+Employee acknowledges that during the course of employment, Employee will have access to and become familiar with confidential information belonging to the Company. Employee agrees to:
+
+(a) Maintain the confidentiality of all such information during and after employment;
+(b) Not use such information for any purpose other than performing duties for the Company;
+(c) Not disclose such information to any third party without prior written authorization.
+
+6. NON-COMPETE COVENANT
+
+During employment and for a period of twelve (12) months following termination of employment for any reason, Employee agrees not to:
+
+(a) Directly or indirectly engage in any business that competes with the Company within a 50-mile radius of any Company office;
+(b) Solicit or attempt to solicit any customers or clients of the Company;
+(c) Solicit or hire any employees of the Company.
+
+7. INTELLECTUAL PROPERTY
+
+All inventions, discoveries, designs, developments, improvements, copyrightable materials, and trade secrets conceived, made, or developed by Employee during employment shall be the sole and exclusive property of the Company.
+
+8. TERMINATION
+
+(a) By Company: The Company may terminate this Agreement at any time, with or without cause, upon two (2) weeks' written notice to Employee.
+
+(b) By Employee: Employee may terminate this Agreement at any time upon four (4) weeks' written notice to the Company.
+
+(c) For Cause: Either party may terminate this Agreement immediately for cause, including but not limited to material breach of this Agreement, gross misconduct, or conviction of a felony.
+
+9. POST-TERMINATION OBLIGATIONS
+
+Upon termination of employment, Employee shall:
+(a) Return all Company property, including documents, equipment, and materials;
+(b) Continue to be bound by confidentiality obligations;
+(c) Cooperate with the Company in any transition activities.
+
+10. DISPUTE RESOLUTION
+
+Any dispute arising out of or relating to this Agreement shall be resolved through binding arbitration in accordance with the rules of the American Arbitration Association.
+
+11. GOVERNING LAW
+
+This Agreement shall be governed by and construed in accordance with the laws of the State of Texas.
+
+12. ENTIRE AGREEMENT
+
+This Agreement constitutes the entire agreement between the parties and supersedes all prior agreements, understandings, and arrangements, whether oral or written.
+
+IN WITNESS WHEREOF, the parties have executed this Agreement as of the date first written above.
+
+DATASYSTEMS CORPORATION
+
+By: _______________________
+Name: Robert Williams
+Title: Chief Human Resources Officer
+Date: February 1, 2024
+
+EMPLOYEE
+
+_______________________
+Jane Smith
+Date: February 1, 2024
