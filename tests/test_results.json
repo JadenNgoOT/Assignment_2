@@ -1,106 +1,106 @@
 {
-  "timestamp": "2025-11-27T22:33:06.832300",
+  "timestamp": "2025-11-27T23:41:24.144244",
   "total_tests": 16,
-  "passed": 16,
-  "failed": 0,
-  "pass_rate": 100.0,
-  "total_time": 52.8191020488739,
+  "passed": 15,
+  "failed": 1,
+  "pass_rate": 93.75,
+  "total_time": 45.82329964637756,
   "results": [
     {
       "id": "test_001",
       "name": "Simple NDA Analysis",
       "passed": true,
-      "time": 3.43349289894104
+      "time": 2.031677007675171
     },
     {
       "id": "test_002",
       "name": "Employment Contract",
-      "passed": true,
-      "time": 4.553839445114136
+      "passed": false,
+      "time": 3.6687726974487305
     },
     {
       "id": "test_003",
       "name": "Terms of Service",
       "passed": true,
-      "time": 4.032444953918457
+      "time": 2.64268159866333
     },
     {
       "id": "test_004",
       "name": "Rental Agreement",
       "passed": true,
-      "time": 3.2384183406829834
+      "time": 2.909423351287842
     },
     {
       "id": "test_005",
       "name": "Service Agreement with Force Majeure",
       "passed": true,
-      "time": 2.31082820892334
+      "time": 2.5659806728363037
     },
     {
       "id": "test_006",
       "name": "Partnership Agreement",
       "passed": true,
-      "time": 2.413363218307495
+      "time": 2.2045040130615234
     },
     {
       "id": "test_007",
       "name": "Input Too Short",
       "passed": true,
-      "time": 1.8835067749023438e-05
+      "time": 5.412101745605469e-05
     },
     {
       "id": "test_008",
       "name": "Prompt Injection - Ignore Instructions",
       "passed": true,
-      "time": 2.4080276489257812e-05
+      "time": 1.8596649169921875e-05
     },
     {
       "id": "test_009",
       "name": "Prompt Injection - System Prompt",
       "passed": true,
-      "time": 1.71661376953125e-05
+      "time": 1.7404556274414062e-05
     },
     {
       "id": "test_010",
       "name": "Consultant Agreement",
       "passed": true,
-      "time": 7.83969259262085
+      "time": 4.043081045150757
     },
     {
       "id": "test_011",
       "name": "Software License Agreement",
       "passed": true,
-      "time": 4.3208794593811035
+      "time": 5.482957601547241
     },
     {
       "id": "test_012",
       "name": "Severability Clause Test",
       "passed": true,
-      "time": 4.782456874847412
+      "time": 3.1927855014801025
     },
     {
       "id": "test_013",
       "name": "Franchise Agreement",
       "passed": true,
-      "time": 3.258868932723999
+      "time": 2.74889874458313
     },
     {
       "id": "test_014",
       "name": "Settlement Agreement",
       "passed": true,
-      "time": 4.374934196472168
+      "time": 5.124897480010986
     },
     {
       "id": "test_015",
       "name": "Multi-Party Joint Venture",
       "passed": true,
-      "time": 3.2095389366149902
+      "time": 3.7864677906036377
     },
     {
       "id": "test_016",
       "name": "Waiver Provision Test",
       "passed": true,
-      "time": 5.050283908843994
+      "time": 5.421082019805908
     }
   ]
 }
