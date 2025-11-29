@@ -140,3 +140,6 @@ All summaries auto-save to `data/summaries.json`:
   "input_length": 450
 }
 ```
+
+## Youtube video portion link
+https://youtu.be/JSP5DMZE9Uw
